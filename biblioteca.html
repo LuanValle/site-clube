@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca | Clube Filatélico do Amazonas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-pagina="biblioteca">
+    <!-- CABECALHO DO SITE: topo com contatos, identidade visual e menu principal. -->
+    <header class="site-header compact-header" data-bloco="cabecalho-site">
+      <div class="topbar" data-secao="barra-superior-contatos">
+        <span>Manaus - AM</span>
+        <a href="mailto:ajuricabaselos69@gmail.com"
+          >ajuricabaselos69@gmail.com</a
+        ><a href="tel:+5592988367224">(92) 98836-7224</a>
+        <div class="topbar-actions">
+          <a
+            class="icon-button"
+            href="https://www.facebook.com/share/14dtvKRnDDQ/"
+            target="_blank"
+            rel="noreferrer"
+            >f</a
+          ><a
+            class="icon-button"
+            href="https://www.instagram.com/c_philatelico"
+            target="_blank"
+            rel="noreferrer"
+            >◎</a
+          >
+          <a class="icon-button" href="#" aria-label="YouTube">&#9654;</a>
+        </div>
+      </div>
+      <div class="brand-panel" data-secao="identidade-clube">
+        <a class="brand" href="index.html"
+          ><img
+            class="club-emblem"
+            src="assets/emblema-clube.png"
+            alt="Emblema do Clube Filatélico do Amazonas"
+          /><span
+            ><small>Clube Filatélico do</small> Amazonas
+            <em>Colecionando a história de selo a selo</em></span
+          ></a
+        >
+        <div class="theater-mark" aria-hidden="true"></div>
+      </div>
+      <nav class="main-nav" data-secao="menu-principal" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="clube.html">O Clube</a>
+        <a href="publicacoes.html">Filatelia</a>
+        <a class="active" href="biblioteca.html">Biblioteca</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="login.html">Associe-se</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </header>
+    <!-- CONTEUDO PRINCIPAL: area especifica desta pagina. -->
+    <main data-bloco="conteudo-biblioteca">
+      <!-- HERO DA PAGINA: apresentacao principal antes do conteudo. -->
+      <section class="page-hero library-page library-hero">
+        <div class="library-hero-copy">
+          <p class="eyebrow">Biblioteca digital</p>
+          <div class="library-title-row">
+            <h1>Espaço para livros, revistas e documentos.</h1>
+            <figure class="library-emblem-card">
+              <img
+                src="assets/biblioteca-edgar-altino.png"
+                alt="Emblema da Biblioteca Filatélica Edgar Altino"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section class="library section-band" data-secao="biblioteca-acervo-digital">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Acervo</p>
+            <h2>Biblioteca do clube</h2>
+          </div>
+          <a
+            class="button secondary"
+            href="https://drive.google.com"
+            target="_blank"
+            rel="noreferrer"
+            >Abrir base no Drive</a
+          >
+        </div>
+        <div class="library-layout">
+          <aside class="upload-panel library-info-panel" data-secao="biblioteca-historia-edgar-altino">
+            <div class="library-summary">
+              <h3>Biblioteca Filatélica Edgar Altino</h3>
+              <p>
+                A Biblioteca Filatélica Edgar Altino é um projeto cultural e
+                documental do Clube Filatélico do Amazonas, criado com o
+                objetivo de preservar, catalogar e disponibilizar importantes
+                registros da filatelia brasileira e do colecionismo.
+              </p>
+              <p>
+                Seu acervo teve origem em 2023, a partir da doação realizada
+                pelo filho do filatelista Edgar Altino ao Clube Filatélico do
+                Amazonas. A coleção reúne parte significativa da biblioteca
+                pessoal de Edgar Altino, um dos maiores filatelistas
+                amazonenses, participante ativo do clube desde sua fundação e
+                presidente da instituição entre 2005 e 2016.
+              </p>
+              <p>
+                Atualmente, a biblioteca possui mais de mil periódicos e
+                documentos filatélicos em fase de catalogação, incluindo
+                revistas históricas, catálogos de selos RHM e publicações de
+                entidades filatélicas brasileiras.
+              </p>
+              <p>
+                Inicialmente em formato digital e com acesso público, nasce como
+                um espaço aberto ao conhecimento, à pesquisa e à preservação da
+                memória filatélica brasileira.
+              </p>
+            </div>
+          </aside>
+          <div class="shelf" data-secao="biblioteca-busca-e-listagem">
+            <div class="shelf-toolbar">
+              <label
+                ><span class="sr-only">Buscar no acervo</span
+                ><input
+                  id="librarySearch"
+                  type="search"
+                  placeholder="Buscar por título, autor ou tema..." /></label
+              ><select id="libraryFilter" aria-label="Filtrar categoria">
+                <option value="todos">Todos</option>
+                <option value="livros">Livros</option>
+                <option value="revistas">Revistas</option>
+                <option value="catalogos">Catálogos</option>
+                <option value="documentos">Documentos</option>
+              </select>
+            </div>
+            <div class="library-stats">
+              <span><strong>128</strong> arquivos cadastrados</span
+              ><span><strong>42 GB</strong> reservados</span
+              ><span><strong>4</strong> coleções iniciais</span>
+            </div>
+            <div id="libraryGrid" class="library-grid"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- RODAPE: endereco postal e dados institucionais do clube. -->
+    <footer class="site-footer" data-bloco="rodape-endereco-institucional">
+      <div class="footer-main">
+        <div class="footer-brand" data-secao="rodape-identidade-clube">
+          <img
+            src="assets/emblema-clube.png"
+            alt="Emblema do Clube Filatélico do Amazonas"
+          />
+          <div>
+            <strong>Clube Filatélico do Amazonas</strong>
+            <span>Colecionando a história de selo a selo desde 1969.</span>
+          </div>
+        </div>
+
+        <div class="footer-contact" data-secao="rodape-contatos">
+          <address>
+            <span class="footer-icon" aria-hidden="true">⌖</span>
+            <span>Rua Ferreira Pena, 71 - Centro<br />Manaus - AM - 69025-010</span>
+          </address>
+          <a href="mailto:contato@clubefilatelicodoamazonas.com.br">
+            <span class="footer-icon" aria-hidden="true">✉</span>
+            <span>contato@clubefilatelicodoamazonas.com.br</span>
+          </a>
+          <a href="tel:+5592991234567">
+            <span class="footer-icon" aria-hidden="true">☏</span>
+            <span>(92) 99123-4567</span>
+          </a>
+        </div>
+
+        <div class="footer-social" data-secao="rodape-redes-sociais">
+          <span>Siga-nos</span>
+          <div class="footer-social-links">
+            <a
+              href="https://www.facebook.com/share/14dtvKRnDDQ/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+              >f</a
+            >
+            <a
+              href="https://www.instagram.com/c_philatelico"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+              >◎</a
+            >
+            <a href="#" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Clube Filatélico do Amazonas - Todos os direitos reservados.
+      </div>
+    </footer>
+    <script src="app.js?v=amazonas-philatelico-2026-05-30"></script>
+  </body>
+</html>

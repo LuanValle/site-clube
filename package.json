@@ -1,0 +1,17 @@
+{
+  "name": "clube-filatelico-amazonas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site estatico com base backend serverless para Vercel e Neon.",
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "bcryptjs": "^2.4.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
