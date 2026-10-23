@@ -2793,3 +2793,19 @@ body:is([data-pagina="inicio"], [data-pagina="clube"]) .brand-panel .theater-mar
     line-height: 1.35;
   }
 }
+
+.club-story-gallery {
+  display: grid;
+  gap: 1.25rem;
+  width: 100%;
+}
+.club-story-gallery .club-story-image {
+  position: static;
+  width: 100%;
+  margin: 0;
+}
+.club-story-gallery .club-story-image img {
+  display: block;
+  height: auto;
+  aspect-ratio: auto;
+}
