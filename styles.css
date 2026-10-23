@@ -2979,3 +2979,29 @@ body.gallery-lightbox-open {
     transition: none;
   }
 }
+
+/* Banner horizontal acima das informações da exposição. */
+body[data-pagina="inicio"] .exhibition {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  padding: 0 0 clamp(1.5rem, 4vw, 3rem);
+  overflow: hidden;
+}
+.exhibition-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.exhibition-copy {
+  padding-inline: clamp(1.5rem, 4vw, 3rem);
+  text-align: center;
+}
+.exhibition-copy > p:not(.eyebrow):not(.exhibition-subtitle):not(.link-notice) {
+  margin-inline: auto;
+}
+.exhibition-actions {
+  justify-content: center;
+}
+body[data-pagina="inicio"] .home-join.home-join-banner {
+  padding-top: 1.25rem;
+}
