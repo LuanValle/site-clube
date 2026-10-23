@@ -3,302 +3,115 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Clube Filatélico do Amazonas — Colecionando a história de selo a selo desde 1969." />
     <title>Clube Filatélico do Amazonas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body data-pagina="inicio">
-    <!-- CABECALHO DO SITE: topo com contatos, identidade visual e menu principal. -->
-    <header class="site-header" data-bloco="cabecalho-site">
-      <div class="topbar" data-secao="barra-superior-contatos">
-        <span>Manaus - AM</span>
-        <a href="mailto:ajuricabaselos69@gmail.com"
-          >ajuricabaselos69@gmail.com</a
-        >
-        <a href="tel:+5592988367224">(92) 98836-7224</a>
-        <div class="topbar-actions">
-          <a
-            class="icon-button"
-            href="https://www.facebook.com/share/14dtvKRnDDQ/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Facebook"
-            >f</a
-          >
-          <a
-            class="icon-button"
-            href="https://www.instagram.com/c_philatelico"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Instagram"
-            >◎</a
-          >
-          <label class="search"
-            ><span class="sr-only">Buscar</span
-            ><input type="search" placeholder="Buscar..."
-          /></label>
-          <a class="icon-button" href="#" aria-label="YouTube">&#9654;</a>
-        </div>
-      </div>
-      <div class="brand-panel" data-secao="identidade-clube">
-        <a
-          class="brand"
-          href="index.html"
-          aria-label="Clube Filatélico do Amazonas"
-        >
-          <img
-            class="club-emblem"
-            src="assets/emblema-clube.png"
-            alt="Emblema do Clube Filatélico do Amazonas"
-          />
-          <span
-            ><small>Clube Filatélico do</small> Amazonas
-            <em>Colecionando a história de selo a selo</em></span
-          >
+    <header class="site-header site-header-home" data-bloco="cabecalho-site">
+      <div class="brand-panel">
+        <a class="brand" href="#inicio" aria-label="Clube Filatélico do Amazonas">
+          <img class="club-emblem" src="assets/emblema-clube.png" alt="Emblema do Clube Filatélico do Amazonas" />
+          <span><small>Clube Filatélico do</small> Amazonas <em>Colecionando a história de selo a selo</em></span>
         </a>
-        <div class="theater-mark" aria-hidden="true"></div>
       </div>
-      <nav class="main-nav" data-secao="menu-principal" aria-label="Navegação principal">
-        <a class="active" href="index.html">Início</a>
-        <a href="clube.html">O Clube</a>
-        <a href="publicacoes.html">Filatelia</a>
-        <a href="biblioteca.html">Biblioteca</a>
-        <a href="noticias.html">Notícias</a>
-        <a href="login.html">Associe-se</a>
-        <a href="contato.html">Contato</a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a class="active" href="#inicio">Início</a>
+        <a href="#o-clube">O Clube</a>
+        <a href="#contato">Contato</a>
       </nav>
     </header>
 
-    <!-- CONTEUDO PRINCIPAL: area especifica desta pagina. -->
-    <main data-bloco="conteudo-inicio">
-      <!-- HERO DA PAGINA INICIAL: chamada principal no formato da referencia. -->
-      <section class="hero home-hero section-band" data-secao="hero-inicio">
+    <main>
+      <section class="hero home-hero" id="inicio" aria-labelledby="titulo-inicio">
         <div class="hero-copy">
           <p class="eyebrow">Desde 1969</p>
-          <h1>Colecionando a história de selo a selo.</h1>
-          <p>
-            Preservando a memória postal, a cultura e a história da Amazônia
-            por meio da filatelia.
-          </p>
+          <h1 id="titulo-inicio">Colecionando a história de selo a selo.</h1>
+          <p>Preservando a memória postal, a cultura e a história da Amazônia por meio da filatelia.</p>
           <div class="hero-actions">
-            <a class="button primary" href="clube.html">Conheça o clube</a>
-            <a class="button ghost" href="biblioteca.html">Ver biblioteca</a>
+            <a class="button primary" href="#o-clube">Conheça o clube</a>
+            <a class="button ghost" href="#exposicao">Conheça a exposição</a>
           </div>
         </div>
-        <div
-          class="stamp-scene"
-          role="img"
-          aria-label="Selos ilustrativos da Amazônia"
-        >
-          <article class="stamp-card stamp-one">
-            <span>Brasil</span><strong>Rio Negro</strong>
-          </article>
-          <article class="stamp-card stamp-two">
-            <span>Brasil</span><strong>Teatro Amazonas</strong>
-          </article>
-          <article class="stamp-card stamp-three">
-            <span>Brasil</span><strong>Vitória-régia</strong>
-          </article>
+      </section>
+
+      <section class="exhibition section" id="exposicao" aria-labelledby="titulo-exposicao">
+        <div class="exhibition-copy">
+          <p class="eyebrow">Exposição digital</p>
+          <h2 id="titulo-exposicao">II EDFA 2026</h2>
+          <p class="exhibition-subtitle">Exposição Digital de Filatelia Amazonense</p>
+          <p>De 6 a 27 de novembro de 2026. Conheça as coleções em PDF e, depois da visitação, participe da votação on-line.</p>
+          <div class="exhibition-actions" aria-label="Acessos da exposição">
+            <button class="button primary" type="button" disabled aria-describedby="links-em-breve">Ver coleções</button>
+            <button class="button secondary" type="button" disabled aria-describedby="links-em-breve">Votar na exposição</button>
+          </div>
+          <p class="link-notice" id="links-em-breve" role="status">Os links das coleções e da votação serão disponibilizados em breve.</p>
         </div>
+        <figure class="exhibition-poster">
+          <img src="assets/edfa-2026.jpg" alt="Cartaz da II EDFA 2026, Exposição Digital de Filatelia Amazonense, de 6 a 27 de novembro de 2026." />
+          <figcaption>II EDFA 2026 — A história em cada selo.</figcaption>
+        </figure>
       </section>
 
-      <!-- PILARES: faixa horizontal com os valores principais do clube. -->
-      <section class="home-pillars" data-secao="pilares-home" aria-label="Pilares do clube">
-        <article>
-          <span class="line-icon">⌂</span>
-          <strong>História</strong>
-          <small>Fundado em 1969 e ligado à memória postal do Amazonas.</small>
-        </article>
-        <article>
-          <span class="line-icon">▤</span>
-          <strong>Cultura</strong>
-          <small>Valorizamos a história postal e a cultura amazônica.</small>
-        </article>
-        <article>
-          <span class="line-icon">▥</span>
-          <strong>Educação</strong>
-          <small>Promovemos conhecimento para novos colecionadores.</small>
-        </article>
-        <article>
-          <span class="line-icon">◎</span>
-          <strong>Amizade</strong>
-          <small>Uma comunidade reunida pelo interesse nos selos.</small>
-        </article>
-        <article>
-          <span class="line-icon">◇</span>
-          <strong>Preservação</strong>
-          <small>Organizamos documentos, coleções e memórias.</small>
-        </article>
-        <article>
-          <span class="line-icon">✤</span>
-          <strong>Paixão</strong>
-          <small>A filatelia conecta histórias, pessoas e lugares.</small>
+      <section class="club-story section" id="o-clube" aria-labelledby="titulo-clube">
+        <div class="club-story-image">
+          <img src="assets/historia-clube.jpg" alt="Foto histórica de integrantes do Clube Filatélico do Amazonas diante de coleções de selos." loading="lazy" />
+        </div>
+        <article class="history-copy">
+          <p class="eyebrow">Nossa história</p>
+          <h2 id="titulo-clube">Clube Filatélico do Amazonas</h2>
+          <p>O Clube Filatélico do Amazonas (CFA) foi fundado em 11 de outubro de 1969, a partir da 1° Exposição Filatélica do Amazonas em setembro de 1969, reunindo colecionadores, pesquisadores e admiradores da filatelia com o propósito de preservar a memória histórica e cultural através dos selos postais.</p>
+          <p>Desde sua criação, o clube atua na promoção da filatelia no Amazonas, incentivando o colecionismo, o estudo da história postal e a valorização da cultura amazônica. Ao longo das décadas, o CFA participou de exposições, encontros filatélicos, atividades educativas e iniciativas culturais que aproximaram gerações de colecionadores e fortaleceram a preservação da memória regional.</p>
+          <p>Mais do que um espaço dedicado aos selos, o Clube Filatélico do Amazonas tornou-se um ponto de encontro entre história, cultura e amizade, mantendo viva a tradição filatélica no coração da Amazônia.</p>
+          <p>Com o lema “Colecionando a história de selo a selo”, o CFA segue trabalhando para difundir a filatelia, incentivar novos colecionadores e preservar o patrimônio cultural e histórico da nossa região para as futuras gerações.</p>
         </article>
       </section>
 
-      <!-- PAINEL HOME: noticias, evento e destaque do mes. -->
-      <section class="home-dashboard" data-secao="painel-home">
-        <article class="home-card home-news">
-          <div class="home-card-heading">
-            <h2>Últimas notícias</h2>
-            <a href="noticias.html">Ver todas</a>
-          </div>
-          <div class="home-news-list">
-            <a href="noticias.html">
-              <img src="assets/referencia-noticias.jpeg" alt="Encontro de colecionadores" />
-              <span>
-                <strong>Encontro mensal reúne associados e convidados</strong>
-                <small>15 de maio de 2026</small>
-              </span>
-            </a>
-            <a href="noticias.html">
-              <img src="assets/referencia-publicacoes.jpeg" alt="Selo amazônico" />
-              <span>
-                <strong>Biblioteca digital recebe novos materiais</strong>
-                <small>10 de maio de 2026</small>
-              </span>
-            </a>
-            <a href="noticias.html">
-              <img src="assets/referencia-clube.jpeg" alt="Atividade institucional" />
-              <span>
-                <strong>CFA fortalece a preservação filatélica</strong>
-                <small>30 de abril de 2026</small>
-              </span>
-            </a>
-          </div>
-          <a class="button ghost-light" href="noticias.html">Mais notícias</a>
-        </article>
-
-        <article class="home-card home-event">
-          <div class="home-card-heading">
-            <h2>Próximo evento</h2>
-            <a href="noticias.html">Ver todos</a>
-          </div>
-          <div class="event-panel">
-            <span class="event-icon">▦</span>
-            <h3>Encontro mensal de colecionadores</h3>
-            <p>25 de maio de 2026, às 09h</p>
-            <p>Sede do Clube Filatélico do Amazonas - Manaus/AM</p>
-            <a class="button primary" href="noticias.html">Saiba mais</a>
-          </div>
-        </article>
-
-        <article class="home-card home-highlight">
-          <div class="home-card-heading">
-            <h2>Destaque do mês</h2>
-          </div>
-          <div class="highlight-stamp">
-            <span>Brasil</span>
-            <strong>Rio Negro - Amazônia</strong>
-          </div>
-          <h3>Selo do mês</h3>
-          <p>
-            Série Rios da Amazônia: um recorte visual sobre a riqueza natural e
-            histórica da região.
-          </p>
-          <a class="button ghost-light" href="biblioteca.html">Conheça mais selos</a>
-        </article>
-      </section>
-
-      <!-- CHAMADA DE ASSOCIACAO: faixa forte antes dos parceiros. -->
-      <section class="home-join" data-secao="chamada-associacao">
+      <section class="home-join" aria-labelledby="titulo-associe-se">
         <div>
-          <span class="join-icon">◎</span>
+          <span class="join-icon" aria-hidden="true">◎</span>
           <div>
-            <h2>Faça parte do CFA!</h2>
-            <p>
-              Associe-se e participe de uma comunidade que valoriza a filatelia,
-              promove conhecimento e preserva a memória histórica da Amazônia.
-            </p>
+            <h2 id="titulo-associe-se">Faça parte do CFA!</h2>
+            <p>Associe-se e participe de uma comunidade que valoriza a filatelia, promove conhecimento e preserva a memória histórica da Amazônia.</p>
           </div>
         </div>
-        <a class="button primary" href="login.html">Quero me associar</a>
+        <button class="button primary" type="button" disabled aria-describedby="associacao-em-breve">Quero me associar</button>
+        <p class="link-notice" id="associacao-em-breve">A ficha de associação será disponibilizada em breve.</p>
       </section>
 
-      <!-- PARCEIROS: faixa final com logos institucionais existentes. -->
-      <section class="home-partners" data-secao="parceiros-home">
-        <p class="eyebrow">Nossos parceiros</p>
+      <section class="home-partners" aria-labelledby="titulo-parceiros">
+        <p class="eyebrow" id="titulo-parceiros">Nossos parceiros</p>
         <div class="partner-grid">
-          <article>
-            <img src="assets/parceiro-correios.png" alt="Correios" />
-          </article>
-          <article>
-            <img src="assets/parceiro-museu-amazonico.png" alt="Museu Amazônico" />
-          </article>
-          <article>
-            <img
-              src="assets/parceiro-associacao-comercial.png"
-              alt="Associação Comercial do Amazonas"
-            />
-          </article>
-          <article>
-            <img
-              src="assets/parceiro-sociedade-numismatica.png"
-              alt="Sociedade Numismática Amazonense"
-            />
-          </article>
+          <article><img src="assets/parceiro-correios.png" alt="Correios" loading="lazy" /></article>
+          <article><img src="assets/parceiro-museu-amazonico.png" alt="Museu Amazônico" loading="lazy" /></article>
+          <article><img src="assets/parceiro-associacao-comercial.png" alt="Associação Comercial do Amazonas" loading="lazy" /></article>
+          <article><img src="assets/parceiro-sociedade-numismatica.png" alt="Sociedade Numismática Amazonense" loading="lazy" /></article>
         </div>
       </section>
     </main>
 
-    <!-- RODAPE: endereco postal e dados institucionais do clube. -->
-    <footer class="site-footer" data-bloco="rodape-endereco-institucional">
+    <footer class="site-footer" id="contato" data-bloco="rodape-contatos">
       <div class="footer-main">
-        <div class="footer-brand" data-secao="rodape-identidade-clube">
-          <img
-            src="assets/emblema-clube.png"
-            alt="Emblema do Clube Filatélico do Amazonas"
-          />
-          <div>
-            <strong>Clube Filatélico do Amazonas</strong>
-            <span>Colecionando a história de selo a selo desde 1969.</span>
-          </div>
+        <div class="footer-brand">
+          <img src="assets/emblema-clube.png" alt="Emblema do Clube Filatélico do Amazonas" />
+          <div><strong>Clube Filatélico do Amazonas</strong><span>Colecionando a história de selo a selo desde 1969.</span></div>
         </div>
-
-        <div class="footer-contact" data-secao="rodape-contatos">
-          <address>
-            <span class="footer-icon" aria-hidden="true">⌖</span>
-            <span>Rua Ferreira Pena, 71 - Centro<br />Manaus - AM - 69025-010</span>
-          </address>
-          <a href="mailto:contato@clubefilatelicodoamazonas.com.br">
-            <span class="footer-icon" aria-hidden="true">✉</span>
-            <span>contato@clubefilatelicodoamazonas.com.br</span>
-          </a>
-          <a href="tel:+5592991234567">
-            <span class="footer-icon" aria-hidden="true">☏</span>
-            <span>(92) 99123-4567</span>
-          </a>
+        <div class="footer-contact">
+          <a href="mailto:ajuricabaselos69@gmail.com"><span class="footer-icon" aria-hidden="true">✉</span><span>ajuricabaselos69@gmail.com</span></a>
+          <a href="tel:+5592988367224"><span class="footer-icon" aria-hidden="true">☏</span><span>(92) 98836-7224</span></a>
         </div>
-
-        <div class="footer-social" data-secao="rodape-redes-sociais">
+        <div class="footer-social">
           <span>Siga-nos</span>
           <div class="footer-social-links">
-            <a
-              href="https://www.facebook.com/share/14dtvKRnDDQ/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Facebook"
-              >f</a
-            >
-            <a
-              href="https://www.instagram.com/c_philatelico"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram"
-              >◎</a
-            >
-            <a href="#" aria-label="YouTube">▶</a>
+            <a href="https://www.facebook.com/share/18tjK4wnwN/" target="_blank" rel="noreferrer" aria-label="Facebook">f</a>
+            <a href="https://www.instagram.com/c_philatelico?igsh=NHd2bGw3cGFoOTAy" target="_blank" rel="noreferrer" aria-label="Instagram">◎</a>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        © 2026 Clube Filatélico do Amazonas - Todos os direitos reservados.
-      </div>
+      <div class="footer-bottom">© 2026 Clube Filatélico do Amazonas — Todos os direitos reservados.</div>
     </footer>
     <script src="app.js"></script>
   </body>

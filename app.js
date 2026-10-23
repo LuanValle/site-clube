@@ -126,6 +126,30 @@ function iniciarCabecalhoFixo() {
   atualizarEstadoDoCabecalho();
 }
 
+function iniciarNavegacaoDaPaginaInicial() {
+  if (document.body.dataset.pagina !== "inicio") return;
+
+  const links = Array.from(document.querySelectorAll('.main-nav a[href^="#"]'));
+  if (!links.length) return;
+
+  function atualizarLinkAtivo() {
+    const posicaoAtual = window.scrollY + 160;
+    let linkAtivo = links[0];
+
+    links.forEach((link) => {
+      const secao = document.querySelector(link.getAttribute("href"));
+      if (secao && secao.offsetTop <= posicaoAtual) linkAtivo = link;
+    });
+
+    links.forEach((link) => {
+      link.classList.toggle("active", link === linkAtivo);
+    });
+  }
+
+  window.addEventListener("scroll", atualizarLinkAtivo, { passive: true });
+  atualizarLinkAtivo();
+}
+
 function iniciarBiblioteca() {
   const gradeDaBiblioteca = document.querySelector("#libraryGrid");
   const campoBuscaBiblioteca = document.querySelector("#librarySearch");
@@ -280,6 +304,7 @@ function iniciarPainelAdministrativo() {
 }
 
 iniciarCabecalhoFixo();
+iniciarNavegacaoDaPaginaInicial();
 iniciarBiblioteca();
 iniciarLogin();
 iniciarPainelAdministrativo();
