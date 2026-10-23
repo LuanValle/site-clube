@@ -150,6 +150,66 @@ function iniciarNavegacaoDaPaginaInicial() {
   atualizarLinkAtivo();
 }
 
+function iniciarGaleriaDoClube() {
+  const galeria = document.querySelector(".club-gallery-grid");
+  if (!galeria || !window.HTMLDialogElement) return;
+
+  const dialogo = document.createElement("dialog");
+  const conteudo = document.createElement("div");
+  const botaoFechar = document.createElement("button");
+  const imagemAmpliada = document.createElement("img");
+  const legenda = document.createElement("p");
+  let gatilhoAtual = null;
+
+  dialogo.className = "gallery-lightbox";
+  dialogo.setAttribute("aria-modal", "true");
+  conteudo.className = "gallery-lightbox-content";
+  botaoFechar.className = "gallery-lightbox-close";
+  botaoFechar.type = "button";
+  botaoFechar.setAttribute("aria-label", "Fechar imagem ampliada");
+  botaoFechar.textContent = "×";
+  imagemAmpliada.className = "gallery-lightbox-image";
+  legenda.className = "gallery-lightbox-caption";
+  legenda.id = "gallery-lightbox-caption";
+  dialogo.setAttribute("aria-labelledby", legenda.id);
+
+  conteudo.append(botaoFechar, imagemAmpliada, legenda);
+  dialogo.append(conteudo);
+  document.body.append(dialogo);
+
+  galeria.querySelectorAll("figure").forEach((item) => {
+    const imagem = item.querySelector("img");
+    const textoDaLegenda = item.querySelector("figcaption")?.textContent.trim();
+    if (!imagem || !textoDaLegenda) return;
+
+    const botao = document.createElement("button");
+    botao.className = "gallery-thumbnail";
+    botao.type = "button";
+    botao.setAttribute("aria-label", `Ampliar imagem: ${textoDaLegenda}`);
+    botao.append(imagem);
+    item.prepend(botao);
+
+    botao.addEventListener("click", () => {
+      gatilhoAtual = botao;
+      imagemAmpliada.src = imagem.currentSrc || imagem.src;
+      imagemAmpliada.alt = imagem.alt;
+      legenda.textContent = textoDaLegenda;
+      document.body.classList.add("gallery-lightbox-open");
+      dialogo.showModal();
+      botaoFechar.focus();
+    });
+  });
+
+  botaoFechar.addEventListener("click", () => dialogo.close());
+  dialogo.addEventListener("click", (evento) => {
+    if (evento.target === dialogo) dialogo.close();
+  });
+  dialogo.addEventListener("close", () => {
+    document.body.classList.remove("gallery-lightbox-open");
+    gatilhoAtual?.focus();
+  });
+}
+
 function iniciarBiblioteca() {
   const gradeDaBiblioteca = document.querySelector("#libraryGrid");
   const campoBuscaBiblioteca = document.querySelector("#librarySearch");
@@ -305,6 +365,7 @@ function iniciarPainelAdministrativo() {
 
 iniciarCabecalhoFixo();
 iniciarNavegacaoDaPaginaInicial();
+iniciarGaleriaDoClube();
 iniciarBiblioteca();
 iniciarLogin();
 iniciarPainelAdministrativo();
