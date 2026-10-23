@@ -2506,7 +2506,8 @@ body[data-pagina="inicio"] .site-header-home .brand {
   margin-inline: auto;
 }
 
-body[data-pagina="inicio"] .site-header-home .main-nav {
+body[data-pagina="inicio"] .site-header-home .main-nav,
+body[data-pagina="clube"] .main-nav {
   gap: clamp(1.25rem, 7vw, 5rem);
 }
 
