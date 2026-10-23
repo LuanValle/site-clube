@@ -2909,11 +2909,9 @@ body[data-pagina="inicio"] .home-join-banner .link-notice {
   display: grid;
   gap: 0.65rem;
   max-height: 92vh;
-  padding: 0.75rem;
-  background: #fffaf1;
-  border: 1px solid rgba(230, 209, 147, 0.7);
-  border-radius: 7px;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+  padding: 0;
+  background: transparent;
+  border: 0;
 }
 .gallery-lightbox-image {
   display: block;
@@ -2925,8 +2923,13 @@ body[data-pagina="inicio"] .home-join-banner .link-notice {
   object-fit: contain;
 }
 .gallery-lightbox-caption {
-  padding: 0 2.6rem 0.2rem 0.35rem;
-  color: var(--green-950);
+  margin: 0;
+  padding: 0.85rem 1.25rem;
+  color: #fffaf1;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 5px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
   font-weight: 600;
   line-height: 1.4;
   text-align: center;
@@ -2964,7 +2967,7 @@ body.gallery-lightbox-open {
     grid-template-columns: 1fr;
   }
   .gallery-lightbox-content {
-    padding: 0.55rem;
+    padding: 0;
   }
   .gallery-lightbox-image {
     max-width: 88vw;
