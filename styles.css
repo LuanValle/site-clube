@@ -1492,6 +1492,8 @@ body[data-pagina="inicio"] main {
 
 .board-grid article {
   display: grid;
+  min-width: 0;
+  align-content: start;
   gap: 0.35rem;
   padding: 0.5rem;
   text-align: center;
@@ -1500,6 +1502,10 @@ body[data-pagina="inicio"] main {
 }
 
 .portrait {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
   display: grid;
   place-items: center;
   aspect-ratio: 0.82;
@@ -2812,10 +2818,11 @@ body:is([data-pagina="inicio"], [data-pagina="clube"]) .brand-panel .theater-mar
 }
 
 .portrait img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
-  aspect-ratio: 0.82;
   object-fit: cover;
   object-position: center 30%;
 }
