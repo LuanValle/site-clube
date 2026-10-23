@@ -2747,3 +2747,14 @@ body[data-pagina="inicio"] .site-footer {
     margin: -0.65rem 0 0;
   }
 }
+
+/* Seções complementares da página O Clube. */
+.club-supplement {
+  width: min(100% - 2rem, 72rem);
+  margin: 1.8rem auto;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: rgba(255, 250, 241, 0.94);
+  border: 1px solid rgba(199, 168, 88, 0.32);
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+}
