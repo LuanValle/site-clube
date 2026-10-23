@@ -2759,25 +2759,26 @@ body[data-pagina="inicio"] .site-footer {
   box-shadow: var(--shadow-soft);
 }
 
-/* Emblema à esquerda e identidade centralizada nas páginas públicas. */
+/* Emblema e identidade juntos à esquerda nas páginas públicas. */
 body:is([data-pagina="inicio"], [data-pagina="clube"]) .brand-panel {
   display: flex;
   padding-inline: clamp(1rem, 3vw, 3rem);
 }
 body:is([data-pagina="inicio"], [data-pagina="clube"]) .brand-panel .brand {
   display: grid;
-  grid-template-columns: clamp(5.4rem, 8vw, 7.4rem) minmax(0, 1fr) clamp(5.4rem, 8vw, 7.4rem);
+  grid-template-columns: clamp(5.4rem, 8vw, 7.4rem) minmax(0, auto);
+  justify-content: start;
   width: 100%;
   gap: 1rem;
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
 body:is([data-pagina="inicio"], [data-pagina="clube"]) .brand-panel .theater-mark {
   display: none;
 }
 @media (max-width: 640px) {
   body:is([data-pagina="inicio"], [data-pagina="clube"]) .brand-panel .brand {
-    grid-template-columns: 3.25rem minmax(0, 1fr) 3.25rem;
+    grid-template-columns: 3.25rem minmax(0, 1fr);
     gap: 0.4rem;
     font-size: clamp(1.1rem, 4.5vw, 1.65rem);
   }
