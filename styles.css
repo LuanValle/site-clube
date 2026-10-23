@@ -2826,3 +2826,21 @@ body:is([data-pagina="inicio"], [data-pagina="clube"]) .brand-panel .theater-mar
   object-fit: cover;
   object-position: center 30%;
 }
+
+body[data-pagina="inicio"] .home-join.home-join-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 0 1.25rem;
+  overflow: hidden;
+}
+.home-join-banner .join-banner-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+body[data-pagina="inicio"] .home-join-banner .link-notice {
+  max-width: none;
+  margin: 0;
+  padding-inline: 1rem;
+}
