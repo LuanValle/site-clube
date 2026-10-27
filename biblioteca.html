@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="contato-boletins.css" />
   </head>
   <body data-pagina="biblioteca">
     <header class="site-header site-header-home" data-bloco="cabecalho-site">
@@ -22,7 +23,7 @@
         <a href="index.html#inicio">Início</a>
         <a href="clube.html">O Clube</a>
         <a class="active" href="biblioteca.html" aria-current="page">Amazonas Philatelico</a>
-        <a href="index.html#contato">Contato</a>
+        <a href="contato.html">Contato</a>
       </nav>
     </header>
 
@@ -41,32 +42,31 @@
             <p class="eyebrow">Edições do boletim</p>
             <h2 id="titulo-edicoes">Boletins Amazonas Philatelico</h2>
           </div>
-          <p>As edições digitais serão liberadas nesta página em breve.</p>
+          <p>Acesse as edições digitais dos boletins.</p>
         </div>
 
         <div class="amazonas-philatelico-grid">
           <article class="amazonas-philatelico-edition">
             <img src="assets/amazonas-philatelico-ano-i-n-01.png" alt="Capa do boletim Amazonas Philatelico, Ano I, número 01" loading="lazy" />
-            <div><span>Boletim</span><h3>Ano I — nº 01</h3><button type="button" disabled aria-describedby="boletins-em-breve">Link em breve</button></div>
+            <div><span>Boletim</span><h3>Ano I — nº 01</h3><a class="boletim-link" href="https://drive.google.com/file/d/1LHceXRVgB_endwDS42ojykHYvFQgThHz/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Ler boletim Amazonas Philatelico 1">Ler boletim</a></div>
           </article>
           <article class="amazonas-philatelico-edition">
             <img src="assets/amazonas-philatelico-ano-i-n-02.png" alt="Capa do boletim Amazonas Philatelico, Ano I, número 02" loading="lazy" />
-            <div><span>Boletim</span><h3>Ano I — nº 02</h3><button type="button" disabled aria-describedby="boletins-em-breve">Link em breve</button></div>
+            <div><span>Boletim</span><h3>Ano I — nº 02</h3><a class="boletim-link" href="https://drive.google.com/file/d/1LHceXRVgB_endwDS42ojykHYvFQgThHz/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Ler boletim Amazonas Philatelico 2">Ler boletim</a></div>
           </article>
           <article class="amazonas-philatelico-edition">
             <img src="assets/amazonas-philatelico-ano-i-n-03.png" alt="Capa do boletim Amazonas Philatelico, Ano I, número 03" loading="lazy" />
-            <div><span>Boletim</span><h3>Ano I — nº 03</h3><button type="button" disabled aria-describedby="boletins-em-breve">Link em breve</button></div>
+            <div><span>Boletim</span><h3>Ano I — nº 03</h3><a class="boletim-link" href="https://drive.google.com/file/d/1L-5K2d5Nr1ZxHAoRc8Ot2TwBNENopsz2/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Ler boletim Amazonas Philatelico 3">Ler boletim</a></div>
           </article>
           <article class="amazonas-philatelico-edition">
             <img src="assets/amazonas-philatelico-ano-ii-n-04.png" alt="Capa do boletim Amazonas Philatelico, Ano II, número 04" loading="lazy" />
-            <div><span>Boletim</span><h3>Ano II — nº 04</h3><button type="button" disabled aria-describedby="boletins-em-breve">Link em breve</button></div>
+            <div><span>Boletim</span><h3>Ano II — nº 04</h3><a class="boletim-link" href="https://drive.google.com/file/d/11BbYYBI90UtekcQaZ2CsSDW5HOHSQfx8/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Ler boletim Amazonas Philatelico 4">Ler boletim</a></div>
           </article>
           <article class="amazonas-philatelico-edition">
             <img src="assets/amazonas-philatelico-ano-ii-n-05.png" alt="Capa do boletim Amazonas Philatelico, Ano II, número 05" loading="lazy" />
-            <div><span>Boletim</span><h3>Ano II — nº 05</h3><button type="button" disabled aria-describedby="boletins-em-breve">Link em breve</button></div>
+            <div><span>Boletim</span><h3>Ano II — nº 05</h3><a class="boletim-link" href="https://drive.google.com/file/d/13I8zljRl3qrwnW6dcSL9gJQTeaMmhISN/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Ler boletim Amazonas Philatelico 5">Ler boletim</a></div>
           </article>
         </div>
-        <p class="amazonas-philatelico-notice" id="boletins-em-breve">Os links para leitura serão disponibilizados em breve.</p>
       </section>
     </main>
 
@@ -85,6 +85,8 @@
           <div class="footer-social-links">
             <a href="https://www.facebook.com/share/18tjK4wnwN/" target="_blank" rel="noreferrer" aria-label="Facebook">f</a>
             <a href="https://www.instagram.com/c_philatelico?igsh=NHd2bGw3cGFoOTAy" target="_blank" rel="noreferrer" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://wa.me/5592988367224" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.66 15l-1.2 4.4 4.5-1.18A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.13l-.29-.17-2.66.7.71-2.58-.19-.3A8 8 0 1 1 12 20zm4.39-5.67c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.91-1.18-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.47-.39-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.69 2.58 4.1 3.62.57.25 1.01.39 1.36.5.57.18 1.09.15 1.5.09.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg></a>
+            <a href="mailto:ajuricabaselos69@gmail.com" aria-label="Enviar e-mail">✉</a>
           </div>
         </div>
       </div>

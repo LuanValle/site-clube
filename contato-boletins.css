@@ -1,0 +1,71 @@
+.boletim-link {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 2.55rem;
+  margin-top: 0.25rem;
+  color: var(--green-950);
+  background: var(--paper-deep);
+  border: 1px solid rgba(6, 45, 31, 0.2);
+  border-radius: 4px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.boletim-link:hover { background: var(--gold-soft); }
+body[data-pagina="contato"] .site-header-home .brand-panel {
+  display: flex;
+  min-height: clamp(7.4rem, 12vw, 10rem);
+  max-height: none;
+  padding: 0.85rem clamp(1rem, 3vw, 3rem);
+}
+body[data-pagina="contato"] .brand-panel .brand {
+  display: grid;
+  grid-template-columns: clamp(5.4rem, 8vw, 7.4rem) minmax(0, auto);
+  justify-content: start;
+  width: 100%;
+  gap: 1rem;
+  margin: 0;
+  text-align: left;
+}
+body[data-pagina="contato"] .main-nav { gap: clamp(1.25rem, 7vw, 5rem); }
+.contact-main { padding: 2rem 1rem 3rem; }
+.contact-card {
+  width: min(100%, 72rem);
+  margin: auto;
+  padding: clamp(1.5rem, 5vw, 4rem);
+  background: rgba(255, 250, 241, 0.94);
+  border: 1px solid rgba(199, 168, 88, 0.38);
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+}
+.contact-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
+.contact-options a {
+  display: grid;
+  justify-items: center;
+  gap: .5rem;
+  padding: 1.5rem;
+  background: #fffaf1;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--green-950);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.contact-options svg { width: 2rem; height: 2rem; }
+.contact-options a > span { font-size: 2rem; line-height: 1; }
+.contact-options a:hover { background: var(--gold-soft); }
+@media (max-width: 640px) {
+  body[data-pagina="contato"] .brand-panel .brand { grid-template-columns: 3.25rem minmax(0, 1fr); gap: 0.4rem; font-size: clamp(1.1rem, 4.5vw, 1.65rem); }
+  body[data-pagina="contato"] .brand-panel .club-emblem { width: 3.25rem; min-width: 3.25rem; }
+  body[data-pagina="contato"] .brand-panel .brand small { font-size: .7rem; }
+  body[data-pagina="contato"] .brand-panel .brand em { font-size: .62rem; line-height: 1.35; }
+  body[data-pagina="contato"] .main-nav { flex-wrap: wrap; justify-content: center; gap: 0 1.15rem; }
+  .contact-options { grid-template-columns: 1fr; }
+}
+
+body[data-pagina="clube"] .history-photo figcaption {
+  margin-top: .5rem;
+  color: var(--muted);
+  font-size: .8rem;
+  text-align: center;
+}
