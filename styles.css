@@ -2980,6 +2980,181 @@ body.gallery-lightbox-open {
   }
 }
 
+/* =========================================================
+   AMAZONAS PHILATELICO
+   Vitrine pública dos boletins do Clube.
+   ========================================================= */
+body[data-pagina="biblioteca"] .site-header-home .brand-panel {
+  display: flex;
+  min-height: clamp(7.4rem, 12vw, 10rem);
+  max-height: none;
+  padding-block: 0.85rem;
+}
+
+body[data-pagina="biblioteca"] .site-header-home .brand {
+  margin-inline: auto;
+}
+
+body[data-pagina="biblioteca"] .site-header-home .main-nav {
+  gap: clamp(1.15rem, 5vw, 4rem);
+}
+
+body[data-pagina="biblioteca"] .site-header-home .main-nav a.active {
+  color: var(--gold-soft);
+}
+
+.amazonas-philatelico-hero {
+  display: grid;
+  align-items: center;
+  min-height: clamp(20rem, 34vw, 28rem);
+  background:
+    linear-gradient(90deg, rgba(6, 45, 31, 0.97), rgba(6, 45, 31, 0.7)),
+    url("assets/fundo-conteudo-principal.jpg") center / cover;
+}
+
+.amazonas-philatelico-hero > div {
+  width: min(100%, 42rem);
+}
+
+.amazonas-philatelico-hero h1 {
+  max-width: 15ch;
+}
+
+.amazonas-philatelico-hero p:not(.eyebrow) {
+  max-width: 40rem;
+  color: #f1dfb8;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+}
+
+.amazonas-philatelico-section {
+  width: min(100% - 2rem, 72rem);
+  margin: 1.8rem auto 3rem;
+  padding: clamp(2rem, 5vw, 4rem);
+  background:
+    radial-gradient(circle at 100% 0, rgba(199, 168, 88, 0.18), transparent 18rem),
+    rgba(255, 250, 241, 0.94);
+  border: 1px solid rgba(199, 168, 88, 0.38);
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+}
+
+.amazonas-philatelico-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.amazonas-philatelico-heading > p {
+  max-width: 22rem;
+  margin: 0;
+  color: var(--muted);
+}
+
+.amazonas-philatelico-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.amazonas-philatelico-edition {
+  display: grid;
+  gap: 0.9rem;
+  min-width: 0;
+  padding: 0.75rem;
+  background: #fffaf1;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(6, 45, 31, 0.08);
+}
+
+.amazonas-philatelico-edition > img {
+  width: 100%;
+  aspect-ratio: 0.72;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid rgba(6, 45, 31, 0.14);
+  border-radius: 3px;
+}
+
+.amazonas-philatelico-edition > div {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.amazonas-philatelico-edition span {
+  color: var(--green-700);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.amazonas-philatelico-edition h3 {
+  color: var(--green-950);
+  font-size: 1.12rem;
+}
+
+.amazonas-philatelico-edition button {
+  width: 100%;
+  min-height: 2.55rem;
+  margin-top: 0.25rem;
+  color: var(--green-950);
+  background: var(--paper-deep);
+  border: 1px solid rgba(6, 45, 31, 0.2);
+  border-radius: 4px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.amazonas-philatelico-edition button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.amazonas-philatelico-notice {
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  body[data-pagina="biblioteca"] .site-header-home .brand-panel {
+    min-height: 8.8rem;
+  }
+
+  body[data-pagina="biblioteca"] .site-header-home .brand {
+    gap: 0.45rem;
+  }
+
+  body[data-pagina="biblioteca"] .site-header-home .club-emblem {
+    width: 4.25rem;
+    min-width: 4.25rem;
+  }
+
+  body[data-pagina="biblioteca"] .site-header-home .main-nav {
+    justify-content: flex-start;
+    gap: 1.15rem;
+  }
+
+  .amazonas-philatelico-hero {
+    min-height: 18rem;
+  }
+
+  .amazonas-philatelico-section {
+    padding: 1.5rem;
+  }
+
+  .amazonas-philatelico-heading {
+    display: grid;
+    align-items: start;
+    gap: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
 /* Banner horizontal acima das informações da exposição. */
 body[data-pagina="inicio"] .exhibition {
   grid-template-columns: minmax(0, 1fr);
@@ -3046,4 +3221,31 @@ body[data-pagina="clube"] .partners .partner-grid {
 }
 @media (max-width: 520px) {
   .former-presidents-list { grid-template-columns: 1fr; }
+}
+
+/* Padroniza o cabeçalho da página dos boletins e mantém o menu acessível no celular. */
+body[data-pagina="biblioteca"] .brand-panel { padding-inline: clamp(1rem, 3vw, 3rem); }
+body[data-pagina="biblioteca"] .brand-panel .brand {
+  display: grid;
+  grid-template-columns: clamp(5.4rem, 8vw, 7.4rem) minmax(0, auto);
+  justify-content: start;
+  width: 100%;
+  gap: 1rem;
+  margin: 0;
+  text-align: left;
+}
+@media (max-width: 640px) {
+  body[data-pagina="biblioteca"] .brand-panel .brand {
+    grid-template-columns: 3.25rem minmax(0, 1fr);
+    gap: 0.4rem;
+    font-size: clamp(1.1rem, 4.5vw, 1.65rem);
+  }
+  body[data-pagina="biblioteca"] .brand-panel .club-emblem { width: 3.25rem; min-width: 3.25rem; }
+  body[data-pagina="biblioteca"] .brand-panel .brand small { font-size: 0.7rem; }
+  body[data-pagina="biblioteca"] .brand-panel .brand em { font-size: 0.62rem; line-height: 1.35; }
+  body:is([data-pagina="inicio"], [data-pagina="clube"], [data-pagina="biblioteca"]) .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 1.15rem;
+  }
 }
